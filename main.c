@@ -30,7 +30,7 @@ sysinfo (&sysi);
 // Display highlighted info 
  printf(HIGHLIGHT ">------------------------------------\n" ENDHL);
  printf(HIGHLIGHT "de - " ENDHL "%s\n", desktopenv);
- printf(HIGHLIGHT "system uptime - " ENDHL "%ld:%02ld:%02ld\n", (sysi.uptime % day) / hour, (sysi.uptime % hour) / minute, sysi.uptime % minute);
+ printf(HIGHLIGHT "system uptime - " ENDHL "%ld:%ld:%02ld:%02ld\n", (sysi.uptime / day), (sysi.uptime % day) / hour, (sysi.uptime % hour) / minute, sysi.uptime % minute);
  printf (HIGHLIGHT  "ram - "  ENDHL "%5.1f MB\n" , sysi.totalram / megabyte);
  printf (HIGHLIGHT  "free ram - " ENDHL "%2.1f MB\n", sysi.freeram / megabyte);
  printf (HIGHLIGHT  "user - "  ENDHL "%s@%s \n", currentUser, hostname );
